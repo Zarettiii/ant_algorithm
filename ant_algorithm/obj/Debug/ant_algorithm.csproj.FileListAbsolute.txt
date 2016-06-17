@@ -1,0 +1,9 @@
+C:\Users\sxsmd\Documents\GitHub\ant_algorithm\ant_algorithm\bin\Debug\ant_algorithm.exe.config
+C:\Users\sxsmd\Documents\GitHub\ant_algorithm\ant_algorithm\obj\Debug\ant_algorithm.csprojResolveAssemblyReference.cache
+C:\Users\sxsmd\Documents\GitHub\ant_algorithm\ant_algorithm\obj\Debug\ant_algorithm.Form1.resources
+C:\Users\sxsmd\Documents\GitHub\ant_algorithm\ant_algorithm\obj\Debug\ant_algorithm.Properties.Resources.resources
+C:\Users\sxsmd\Documents\GitHub\ant_algorithm\ant_algorithm\obj\Debug\ant_algorithm.csproj.GenerateResource.Cache
+C:\Users\sxsmd\Documents\GitHub\ant_algorithm\ant_algorithm\bin\Debug\ant_algorithm.exe
+C:\Users\sxsmd\Documents\GitHub\ant_algorithm\ant_algorithm\bin\Debug\ant_algorithm.pdb
+C:\Users\sxsmd\Documents\GitHub\ant_algorithm\ant_algorithm\obj\Debug\ant_algorithm.exe
+C:\Users\sxsmd\Documents\GitHub\ant_algorithm\ant_algorithm\obj\Debug\ant_algorithm.pdb
