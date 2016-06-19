@@ -22,7 +22,7 @@ namespace ant_algorithm
             InitializeComponent();
 
 
-            c__data_grids.data_grid(dgv_map);
+            c__data_grids.data_grid(dgv_map);            
         }
 
 
@@ -30,6 +30,9 @@ namespace ant_algorithm
 
         private void btn_calculate_Click(object sender, EventArgs e)
         {
+            btn_calculate.Enabled = false;
+
+
             chrt_length.Series["Length"].Points.Clear();
 
 
@@ -72,6 +75,9 @@ namespace ant_algorithm
 
                 chrt_length.Series["Length"].Points.AddXY(i__1 + 1, h__hive.get_way_length());
             }
+
+
+            btn_calculate.Enabled = true;
         }
 
 
@@ -79,8 +85,11 @@ namespace ant_algorithm
 
         private void btn_set_values_Click(object sender, EventArgs e)
         {
-            txt_ant_count.Text       = "3";
-            txt_iteration_count.Text = "5";
+            dgv_map.Rows.Clear();
+
+
+            txt_ant_count.Text       = "5";
+            txt_iteration_count.Text = "10";
 
 
             dgv_map.Rows.Add("1", "2", "3");
@@ -99,6 +108,11 @@ namespace ant_algorithm
 
             dgv_map.Rows.Add("5", "1", "3");
             dgv_map.Rows.Add("5", "4", "3");
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            btn_set_values.PerformClick();
         }
     }
 }

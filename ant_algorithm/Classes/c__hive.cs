@@ -45,7 +45,7 @@ namespace ant_algorithm.Classes
             //
             if (b__ant_count <= 0)
             {
-                b__ant_count = 10; // Задать стандартное значение
+                b__ant_count = 5; // Задать стандартное значение
             }
 
 
@@ -90,6 +90,8 @@ namespace ant_algorithm.Classes
          */
         public byte get_way_length()
         {
+            int i__long_breaker = 0;
+
             byte b__path_length;
             byte b__current_node;
 
@@ -113,8 +115,11 @@ namespace ant_algorithm.Classes
                 b__path_length += ed__item.b__length;
 
                 b__current_node = ed__item.b__to;
+
+
+                i__long_breaker++;
             }
-            while (b__current_node != b__end_node);
+            while (b__current_node != b__end_node || i__long_breaker > 30);
 
 
             return b__path_length;
@@ -170,7 +175,7 @@ namespace ant_algorithm.Classes
             // Установить индексы для вычислений при переходе
             //
             d__a = 2;
-            d__b = 1;
+            d__b = 2;
             d__k = 1;
 
 
@@ -186,14 +191,17 @@ namespace ant_algorithm.Classes
          */
         public void passage()
         {
+            int i__long_breaker = 0;
+
+
             //
             // Выполнять ходы, пока возможно
             //
             do
             {
-
+                i__long_breaker++;
             }
-            while (make_a_move());
+            while (make_a_move() || i__long_breaker > 30);
 
 
             passage_is_over(); // Проход закончен
@@ -322,8 +330,13 @@ namespace ant_algorithm.Classes
                     ed__to_move = l__edges[i__1]; // Установить ребро по которому совершится переход
 
                     break; // Выйти из цикла
-                }    
-                 
+                }                                    
+            }
+
+
+            if (ed__to_move == null)
+            {
+                ed__to_move = l__edges.Last();
             }
 
 
@@ -448,7 +461,7 @@ namespace ant_algorithm.Classes
             //
             foreach (c__edge ed__item in l__ed__edges)
             {
-                ed__item.d__phero = ed__item.d__phero * 0.8; // Уменьшить значение феромона 
+                ed__item.d__phero = ed__item.d__phero * 0.1 + 1; // Уменьшить значение феромона 
             }
         }
     }
