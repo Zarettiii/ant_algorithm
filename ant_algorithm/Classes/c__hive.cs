@@ -127,6 +127,43 @@ namespace ant_algorithm.Classes
 
 
 
+        public string get_way()
+        {
+            string s__rezult = "1";
+
+            int i__long_breaker = 0;
+            
+            byte b__current_node;
+
+            List<c__edge> l__ed__way;
+
+            c__edge ed__item;
+            
+
+            b__current_node = 1;
+
+
+            do
+            {
+                l__ed__way = map__map.l__ed__edges.Where(o => o.b__from == b__current_node).ToList();
+
+                ed__item = l__ed__way.OrderByDescending(o => o.d__phero).First();
+
+
+                s__rezult += " - " + ed__item.b__to.ToString();
+
+                b__current_node = ed__item.b__to;
+
+
+                i__long_breaker++;
+            }
+            while (b__current_node != b__end_node || i__long_breaker > 30);
+
+            return s__rezult;
+        }
+
+
+
 
         /**
          * Установить количество муравьев в улье

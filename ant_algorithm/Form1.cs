@@ -76,6 +76,7 @@ namespace ant_algorithm
                 chrt_length.Series["Length"].Points.AddXY(i__1 + 1, h__hive.get_way_length());
             }
 
+            txt_rezult.Text = h__hive.get_way();
 
             btn_calculate.Enabled = true;
         }
@@ -88,26 +89,26 @@ namespace ant_algorithm
             dgv_map.Rows.Clear();
 
 
-            txt_ant_count.Text       = "5";
-            txt_iteration_count.Text = "10";
+            txt_ant_count.Text       = "4";
+            txt_iteration_count.Text = "8";
 
 
-            dgv_map.Rows.Add("1", "2", "3");
-            dgv_map.Rows.Add("1", "5", "6");
+            dgv_map.Rows.Add("1", "2", "1");
+            dgv_map.Rows.Add("1", "5", "19");
 
             dgv_map.Rows.Add("2", "1", "3");
-            dgv_map.Rows.Add("2", "3", "3");
-            dgv_map.Rows.Add("2", "4", "3");
+            dgv_map.Rows.Add("2", "3", "4");
+            dgv_map.Rows.Add("2", "4", "5");
 
-            dgv_map.Rows.Add("3", "2", "3");
-            dgv_map.Rows.Add("3", "4", "3");
+            dgv_map.Rows.Add("3", "2", "6");
+            dgv_map.Rows.Add("3", "4", "7");
 
-            dgv_map.Rows.Add("4", "2", "3");
-            dgv_map.Rows.Add("4", "3", "3");
-            dgv_map.Rows.Add("4", "5", "3");
+            dgv_map.Rows.Add("4", "2", "8");
+            dgv_map.Rows.Add("4", "3", "9");
+            dgv_map.Rows.Add("4", "5", "10");
 
-            dgv_map.Rows.Add("5", "1", "3");
-            dgv_map.Rows.Add("5", "4", "3");
+            dgv_map.Rows.Add("5", "1", "11");
+            dgv_map.Rows.Add("5", "4", "12");
         }
 
         private void Form1_Load(object sender, EventArgs e)

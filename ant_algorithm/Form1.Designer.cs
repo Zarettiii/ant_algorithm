@@ -43,6 +43,7 @@
             this.txt_ant_count = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_rezult = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_map)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -75,7 +76,7 @@
             this.tabControl1.Location = new System.Drawing.Point(406, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(517, 508);
+            this.tabControl1.Size = new System.Drawing.Size(517, 476);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -84,7 +85,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(509, 482);
+            this.tabPage1.Size = new System.Drawing.Size(509, 450);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Длина найденного пути";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -101,7 +102,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Length";
             this.chrt_length.Series.Add(series1);
-            this.chrt_length.Size = new System.Drawing.Size(497, 470);
+            this.chrt_length.Size = new System.Drawing.Size(497, 448);
             this.chrt_length.TabIndex = 0;
             this.chrt_length.Text = "chart1";
             // 
@@ -170,11 +171,19 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Количество муравьев";
             // 
+            // txt_rezult
+            // 
+            this.txt_rezult.Location = new System.Drawing.Point(406, 496);
+            this.txt_rezult.Name = "txt_rezult";
+            this.txt_rezult.Size = new System.Drawing.Size(513, 20);
+            this.txt_rezult.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(935, 537);
+            this.Controls.Add(this.txt_rezult);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.btn_calculate);
             this.Controls.Add(this.btn_set_values);
@@ -192,6 +201,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -209,6 +219,7 @@
         private System.Windows.Forms.TextBox txt_ant_count;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txt_rezult;
     }
 }
 
